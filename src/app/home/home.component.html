@@ -1,3 +1,15 @@
-<p>
-  home works!
-</p>
+<h1 [class.gray]="h1Style">Home class property</h1> <!-- Set class gray if h1Style is true-->
+
+<h1 [ngClass]="{
+  'gray' : h1Style,
+  'large' : !h1Style
+}">Home ngClass</h1> <!-- Set gray class and large class according h1Style value (several class acording logic) -->
+
+<h1 [style.color]="h1Style ? 'black' :  'red'">Home style property</h1> <!-- Set a style property value according h1Style value -->
+
+<h1 [ngStyle]="{
+  'color' : h1Style ? 'black' :  'red',
+  'font-size' : !h1Style ? '1em' : '4em'
+}">Home ngStyle</h1>
+
+<button (click)="firstClick()">Click me!</button> <!-- Set several style properties value according h1Style value (logic) -->
