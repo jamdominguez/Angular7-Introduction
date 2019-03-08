@@ -13,3 +13,10 @@
 }">Home ngStyle</h1>
 
 <button (click)="firstClick()">Click me!</button> <!-- Set several style properties value according h1Style value (logic) -->
+
+<ul *ngIf="users">
+  <li *ngFor="let user of users.data">
+    <img [src]="user.avatar">
+    <p>{{ user.first_name }} {{ user.last_name }}</p>
+  </li>
+</ul>
